@@ -1,0 +1,223 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  padding: 8px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* --- Panel --- */
+.panel {
+  position: relative;
+  background: #050a15;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.panel_clear {
+  border-color: rgba(0, 255, 136, 0.3);
+  box-shadow: 0 0 0 rgba(0, 255, 136, 0);
+}
+
+.panel_warning {
+  border-color: #ffb800;
+  box-shadow: 0 0 14px rgba(255, 184, 0, 0.25);
+}
+
+.panel_critical {
+  border-color: #ff3b3b;
+  box-shadow: 0 0 18px rgba(255, 59, 59, 0.35);
+  animation: criticalPulse 1s ease-in-out infinite;
+}
+
+@keyframes criticalPulse {
+  0%, 100% { box-shadow: 0 0 18px rgba(255, 59, 59, 0.35); }
+  50% { box-shadow: 0 0 32px rgba(255, 59, 59, 0.6); }
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Alert overlays --- */
+.alertOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.overlayRed {
+  background: rgba(255, 30, 30, 0.12);
+}
+
+.overlayYellow {
+  background: rgba(255, 180, 0, 0.08);
+}
+
+.alertTextRed {
+  font-size: clamp(11px, 1.4vw, 16px);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #ff3b3b;
+  text-shadow: 0 0 20px rgba(255, 59, 59, 0.9), 0 0 40px rgba(255, 59, 59, 0.5);
+  animation: pulseText 0.7s ease-in-out infinite;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 59, 59, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+}
+
+.alertTextYellow {
+  font-size: clamp(11px, 1.4vw, 16px);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #ffb800;
+  text-shadow: 0 0 16px rgba(255, 184, 0, 0.8);
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 184, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+}
+
+@keyframes pulseText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+/* --- HUD bars --- */
+.hudTop,
+.hudBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  pointer-events: none;
+}
+
+.hudTop {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  justify-content: space-between;
+}
+
+.hudBottom {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.hudLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.hudRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.camId {
+  font-size: 10px;
+  font-weight: 700;
+  color: #00d4ff;
+  letter-spacing: 0.12em;
+}
+
+.camLocation {
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.06em;
+}
+
+.resBadge {
+  font-size: 8px;
+  color: rgba(0, 212, 255, 0.7);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  padding: 1px 4px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+
+.liveDot {
+  font-size: 8px;
+  font-weight: 700;
+  color: #ff3b3b;
+  letter-spacing: 0.1em;
+  animation: recBlink 1.4s ease-in-out infinite;
+}
+
+@keyframes recBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.zoneLabel {
+  font-size: 8px;
+  color: rgba(0, 212, 255, 0.5);
+  letter-spacing: 0.1em;
+}
+
+.timestamp {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  flex: 1;
+  text-align: center;
+}
+
+.statusChip {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.chip_clear {
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.12);
+  border: 1px solid rgba(0, 255, 136, 0.25);
+}
+
+.chip_warning {
+  color: #ffb800;
+  background: rgba(255, 184, 0, 0.12);
+  border: 1px solid rgba(255, 184, 0, 0.3);
+}
+
+.chip_critical {
+  color: #ff3b3b;
+  background: rgba(255, 59, 59, 0.12);
+  border: 1px solid rgba(255, 59, 59, 0.3);
+}
+
+/* --- Corner brackets --- */
+.corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: rgba(0, 212, 255, 0.5);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.cornerTL { top: 4px; left: 4px; border-width: 1px 0 0 1px; }
+.cornerTR { top: 4px; right: 4px; border-width: 1px 1px 0 0; }
+.cornerBL { bottom: 4px; left: 4px; border-width: 0 0 1px 1px; }
+.cornerBR { bottom: 4px; right: 4px; border-width: 0 1px 1px 0; }
