@@ -1,5 +1,5 @@
 .sidebar {
-  width: 196px;
+  width: 216px;
   flex-shrink: 0;
   background: #060b18;
   border-right: 1px solid rgba(0, 212, 255, 0.08);
@@ -17,14 +17,14 @@
 }
 
 .headerLabel {
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 0.16em;
   color: rgba(0, 212, 255, 0.45);
   font-weight: 600;
 }
 
 .headerCount {
-  font-size: 8px;
+  font-size: 11px;
   color: rgba(0, 230, 118, 0.7);
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -97,14 +97,14 @@
 }
 
 .cameraName {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   color: #cdd9e5;
   letter-spacing: 0.08em;
 }
 
 .cameraLocation {
-  font-size: 8px;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.35);
   white-space: nowrap;
   overflow: hidden;
@@ -161,23 +161,23 @@
 }
 
 .statusText {
-  font-size: 7.5px;
+  font-size: 10px;
   font-weight: 700;
   color: rgba(0, 230, 118, 0.8);
   letter-spacing: 0.1em;
 }
 
 .zoneTag {
-  font-size: 7px;
+  font-size: 10px;
   color: rgba(0, 212, 255, 0.4);
   letter-spacing: 0.08em;
   background: rgba(0, 212, 255, 0.06);
-  padding: 1px 4px;
+  padding: 1px 5px;
   border-radius: 2px;
 }
 
 .alertState {
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.06em;
   margin-left: auto;
@@ -199,7 +199,7 @@
 }
 
 .summaryLabel {
-  font-size: 7.5px;
+  font-size: 10px;
   letter-spacing: 0.14em;
   color: rgba(255, 255, 255, 0.2);
   font-weight: 600;
@@ -233,7 +233,7 @@
 }
 
 .statLabel {
-  font-size: 6.5px;
+  font-size: 10px;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.2);
 }

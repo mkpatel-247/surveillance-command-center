@@ -175,7 +175,7 @@
 }
 
 .camId {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   color: #00d4ff;
   letter-spacing: 0.14em;
@@ -183,22 +183,22 @@
 }
 
 .camLocation {
-  font-size: 7.5px;
+  font-size: 10px;
   color: rgba(255, 255, 255, 0.45);
   letter-spacing: 0.06em;
 }
 
 .resBadge {
-  font-size: 7px;
+  font-size: 9px;
   color: rgba(0, 212, 255, 0.5);
   border: 1px solid rgba(0, 212, 255, 0.15);
-  padding: 1px 4px;
+  padding: 1px 5px;
   border-radius: 2px;
   letter-spacing: 0.04em;
 }
 
 .liveDot {
-  font-size: 7.5px;
+  font-size: 9px;
   font-weight: 700;
   color: rgba(255, 59, 59, 0.8);
   letter-spacing: 0.1em;
@@ -211,7 +211,7 @@
 }
 
 .zoneLabel {
-  font-size: 7.5px;
+  font-size: 10px;
   color: rgba(0, 212, 255, 0.4);
   letter-spacing: 0.12em;
   flex-shrink: 0;
@@ -219,7 +219,7 @@
 }
 
 .metaCoord {
-  font-size: 7px;
+  font-size: 9px;
   color: rgba(255, 255, 255, 0.2);
   letter-spacing: 0.04em;
   flex: 1;
@@ -229,7 +229,7 @@
 }
 
 .timestamp {
-  font-size: 8.5px;
+  font-size: 10px;
   color: rgba(255, 255, 255, 0.45);
   letter-spacing: 0.1em;
   font-variant-numeric: tabular-nums;
@@ -239,10 +239,10 @@
 }
 
 .statusChip {
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  padding: 2px 5px;
+  padding: 2px 6px;
   border-radius: 2px;
   flex-shrink: 0;
 }

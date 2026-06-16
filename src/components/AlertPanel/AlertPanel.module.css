@@ -1,5 +1,5 @@
 .panel {
-  width: 252px;
+  width: 284px;
   flex-shrink: 0;
   background: #060b18;
   border-left: 1px solid rgba(0, 212, 255, 0.08);
@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.16em;
   color: rgba(0, 212, 255, 0.45);
@@ -32,7 +32,7 @@
 }
 
 .liveTag {
-  font-size: 7.5px;
+  font-size: 10px;
   font-weight: 700;
   color: rgba(255, 59, 59, 0.7);
   letter-spacing: 0.14em;
@@ -82,7 +82,7 @@
 .statGreen { color: #00e676; }
 
 .statLabel {
-  font-size: 6.5px;
+  font-size: 10px;
   color: rgba(255, 255, 255, 0.2);
   letter-spacing: 0.1em;
   margin-top: 3px;
@@ -100,14 +100,14 @@
 }
 
 .listHeaderText {
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 0.12em;
   color: rgba(255, 255, 255, 0.2);
   font-weight: 600;
 }
 
 .listCount {
-  font-size: 7px;
+  font-size: 10px;
   color: rgba(0, 212, 255, 0.3);
   font-variant-numeric: tabular-nums;
 }
@@ -188,10 +188,10 @@
 }
 
 .severityBadge {
-  font-size: 6.5px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  padding: 1px 4px;
+  padding: 1px 5px;
   border-radius: 2px;
   flex-shrink: 0;
 }
@@ -215,7 +215,7 @@
 }
 
 .cameraTag {
-  font-size: 7.5px;
+  font-size: 10px;
   color: rgba(0, 212, 255, 0.55);
   white-space: nowrap;
   overflow: hidden;
@@ -230,14 +230,14 @@
 }
 
 .detectionType {
-  font-size: 8.5px;
+  font-size: 12px;
   font-weight: 600;
   color: rgba(205, 217, 229, 0.75);
   letter-spacing: 0.04em;
 }
 
 .confidence {
-  font-size: 7.5px;
+  font-size: 10px;
   color: rgba(0, 212, 255, 0.5);
   font-variant-numeric: tabular-nums;
   flex-shrink: 0;
@@ -250,20 +250,20 @@
 }
 
 .zone {
-  font-size: 7px;
+  font-size: 10px;
   color: rgba(255, 255, 255, 0.2);
   letter-spacing: 0.08em;
 }
 
 .timestamp {
-  font-size: 7px;
+  font-size: 10px;
   color: rgba(255, 255, 255, 0.22);
   font-variant-numeric: tabular-nums;
   margin-left: auto;
 }
 
 .ackTag {
-  font-size: 6px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.1em;
   color: rgba(0, 212, 255, 0.3);
@@ -302,7 +302,7 @@
   gap: 8px;
   padding: 40px 0;
   color: rgba(255, 255, 255, 0.15);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.1em;
 }
 

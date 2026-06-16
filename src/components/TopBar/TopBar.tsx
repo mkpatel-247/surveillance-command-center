@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Shield, Wifi, Volume2, VolumeX, AlertTriangle, CheckCircle } from '../Icons';
+import { Wifi, Volume2, VolumeX, AlertTriangle, CheckCircle } from '../Icons';
 import type { Alert } from '../../types';
 import { formatDate, formatTimestamp } from '../../utils/alertHelpers';
 import styles from './TopBar.module.css';
@@ -57,7 +57,7 @@ export function TopBar({ alerts, soundEnabled, onToggleSound, camerasOnline }: T
 
       <header className={styles.topbar}>
         <div className={styles.brand}>
-          <Shield size={18} className={styles.brandIcon} />
+          <img src="/command-center-logo.png" alt="Sentinel" className={styles.brandLogo} />
           <div className={styles.brandText}>
             <span className={styles.brandName}>SENTINEL</span>
             <span className={styles.brandSub}>COMMAND</span>
