@@ -60,7 +60,7 @@ export function TopBar({ alerts, soundEnabled, onToggleSound, camerasOnline }: T
           <img src="/command-center-logo1.png" alt="Sentinel" className={styles.brandLogo} />
           <div className={styles.brandText}>
             <span className={styles.brandName}>SENTINEL</span>
-            <span className={styles.brandSub}>COMMAND</span>
+            <span className={styles.brandSub}>COMMAND CENTER</span>
           </div>
           <span className={styles.version}>v4.2.1</span>
         </div>
