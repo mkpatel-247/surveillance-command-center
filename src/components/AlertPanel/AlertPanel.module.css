@@ -237,7 +237,7 @@
 }
 
 .confidence {
-  font-size: 10px;
+  font-size: 12px;
   color: rgba(0, 212, 255, 0.5);
   font-variant-numeric: tabular-nums;
   flex-shrink: 0;
@@ -250,8 +250,8 @@
 }
 
 .zone {
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
   letter-spacing: 0.08em;
 }
 

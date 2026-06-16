@@ -57,7 +57,7 @@ export function TopBar({ alerts, soundEnabled, onToggleSound, camerasOnline }: T
 
       <header className={styles.topbar}>
         <div className={styles.brand}>
-          <img src="/command-center-logo.png" alt="Sentinel" className={styles.brandLogo} />
+          <img src="/command-center-logo1.png" alt="Sentinel" className={styles.brandLogo} />
           <div className={styles.brandText}>
             <span className={styles.brandName}>SENTINEL</span>
             <span className={styles.brandSub}>COMMAND</span>
