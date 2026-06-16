@@ -1,8 +1,8 @@
 .panel {
-  width: 260px;
+  width: 252px;
   flex-shrink: 0;
   background: #060b18;
-  border-left: 1px solid rgba(0, 212, 255, 0.1);
+  border-left: 1px solid rgba(0, 212, 255, 0.08);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -12,8 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 14px 10px;
-  border-bottom: 1px solid rgba(0, 212, 255, 0.08);
+  padding: 10px 12px 9px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.07);
   flex-shrink: 0;
 }
 
@@ -21,33 +21,34 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: rgba(0, 212, 255, 0.6);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: rgba(0, 212, 255, 0.45);
 }
 
 .headerIcon {
-  color: rgba(0, 212, 255, 0.5);
+  color: rgba(0, 212, 255, 0.4);
 }
 
 .liveTag {
-  font-size: 8px;
+  font-size: 7.5px;
   font-weight: 700;
-  color: #ff3b3b;
-  letter-spacing: 0.12em;
-  animation: blink 1.2s ease-in-out infinite;
+  color: rgba(255, 59, 59, 0.7);
+  letter-spacing: 0.14em;
+  animation: blink 1.4s ease-in-out infinite;
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.25; }
+  50% { opacity: 0.2; }
 }
 
+/* ── Stats row ── */
 .stats {
   display: flex;
   gap: 0;
-  border-bottom: 1px solid rgba(0, 212, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.07);
   flex-shrink: 0;
 }
 
@@ -56,9 +57,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 4px;
-  border-right: 1px solid rgba(0, 212, 255, 0.06);
-  transition: background 0.3s ease;
+  padding: 9px 4px;
+  border-right: 1px solid rgba(0, 212, 255, 0.05);
+  transition: background 0.4s ease;
 }
 
 .statBox:last-child {
@@ -66,111 +67,100 @@
 }
 
 .statBoxRed {
-  background: rgba(255, 59, 59, 0.06);
+  background: rgba(255, 59, 59, 0.05);
 }
 
 .statValue {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  color: #e0f0ff;
+  color: rgba(205, 217, 229, 0.8);
   font-variant-numeric: tabular-nums;
   line-height: 1;
 }
 
 .statRed { color: #ff3b3b; }
-.statGreen { color: #00ff88; }
+.statGreen { color: #00e676; }
 
 .statLabel {
-  font-size: 7px;
-  color: rgba(255, 255, 255, 0.25);
+  font-size: 6.5px;
+  color: rgba(255, 255, 255, 0.2);
   letter-spacing: 0.1em;
   margin-top: 3px;
   text-align: center;
 }
 
+/* ── List header ── */
 .listHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7px 14px;
-  border-bottom: 1px solid rgba(0, 212, 255, 0.06);
+  padding: 6px 12px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.05);
   flex-shrink: 0;
 }
 
 .listHeaderText {
   font-size: 7px;
   letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.25);
-  font-weight: 700;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
 }
 
 .listCount {
   font-size: 7px;
-  color: rgba(0, 212, 255, 0.4);
+  color: rgba(0, 212, 255, 0.3);
+  font-variant-numeric: tabular-nums;
 }
 
+/* ── Alert list ── */
 .list {
   flex: 1;
   overflow-y: auto;
-  padding: 6px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  scroll-behavior: smooth;
+  gap: 3px;
 }
 
-.list::-webkit-scrollbar {
-  width: 3px;
-}
-
-.list::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.list::-webkit-scrollbar-thumb {
-  background: rgba(0, 212, 255, 0.2);
-  border-radius: 2px;
-}
-
-/* --- Alert cards --- */
+/* ── Alert cards ── */
 .alertCard {
   display: flex;
   align-items: flex-start;
-  gap: 7px;
-  padding: 8px 8px 8px 6px;
-  border-radius: 4px;
+  gap: 6px;
+  padding: 7px 7px 7px 5px;
+  border-radius: 2px;
   border: 1px solid;
-  border-left-width: 3px;
-  transition: opacity 0.3s ease, background 0.3s ease;
+  border-left-width: 2px;
+  transition: opacity 0.4s ease;
   position: relative;
 }
 
 .cardCritical {
-  background: rgba(255, 59, 59, 0.07);
-  border-color: rgba(255, 59, 59, 0.25);
+  background: rgba(255, 59, 59, 0.06);
+  border-color: rgba(255, 59, 59, 0.2);
   border-left-color: #ff3b3b;
-  animation: criticalPulse 1.5s ease-in-out infinite;
+  animation: critPulse 1.8s ease-in-out infinite;
 }
 
-@keyframes criticalPulse {
-  0%, 100% { background: rgba(255, 59, 59, 0.07); }
-  50% { background: rgba(255, 59, 59, 0.13); }
+@keyframes critPulse {
+  0%, 100% { background: rgba(255, 59, 59, 0.06); }
+  50% { background: rgba(255, 59, 59, 0.11); }
 }
 
 .cardWarning {
-  background: rgba(255, 184, 0, 0.05);
-  border-color: rgba(255, 184, 0, 0.2);
-  border-left-color: #ffb800;
+  background: rgba(255, 179, 0, 0.04);
+  border-color: rgba(255, 179, 0, 0.15);
+  border-left-color: rgba(255, 179, 0, 0.6);
 }
 
 .cardClear {
-  background: rgba(0, 255, 136, 0.03);
-  border-color: rgba(0, 255, 136, 0.1);
-  border-left-color: rgba(0, 255, 136, 0.35);
+  background: transparent;
+  border-color: rgba(0, 212, 255, 0.07);
+  border-left-color: rgba(0, 230, 118, 0.2);
 }
 
 .cardAcknowledged {
-  opacity: 0.38;
+  opacity: 0.3;
   animation: none;
 }
 
@@ -179,54 +169,54 @@
   flex-shrink: 0;
 }
 
-.iconRed { color: #ff3b3b; }
-.iconYellow { color: #ffb800; }
-.iconGreen { color: #00ff88; }
+.iconRed { color: rgba(255, 59, 59, 0.8); }
+.iconYellow { color: rgba(255, 179, 0, 0.8); }
+.iconGreen { color: rgba(0, 230, 118, 0.6); }
 
 .cardBody {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .cardTop {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .severityBadge {
-  font-size: 7px;
-  font-weight: 800;
+  font-size: 6.5px;
+  font-weight: 700;
   letter-spacing: 0.1em;
-  padding: 1px 5px;
+  padding: 1px 4px;
   border-radius: 2px;
   flex-shrink: 0;
 }
 
 .badgeCritical {
   color: #ff3b3b;
-  background: rgba(255, 59, 59, 0.18);
-  border: 1px solid rgba(255, 59, 59, 0.35);
+  background: rgba(255, 59, 59, 0.15);
+  border: 1px solid rgba(255, 59, 59, 0.3);
 }
 
 .badgeWarning {
-  color: #ffb800;
-  background: rgba(255, 184, 0, 0.15);
-  border: 1px solid rgba(255, 184, 0, 0.3);
+  color: #ffb300;
+  background: rgba(255, 179, 0, 0.12);
+  border: 1px solid rgba(255, 179, 0, 0.25);
 }
 
 .badgeClear {
-  color: #00ff88;
-  background: rgba(0, 255, 136, 0.1);
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  color: rgba(0, 230, 118, 0.7);
+  background: rgba(0, 230, 118, 0.08);
+  border: 1px solid rgba(0, 230, 118, 0.15);
 }
 
 .cameraTag {
-  font-size: 8px;
-  color: rgba(0, 212, 255, 0.7);
+  font-size: 7.5px;
+  color: rgba(0, 212, 255, 0.55);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -240,15 +230,15 @@
 }
 
 .detectionType {
-  font-size: 9px;
+  font-size: 8.5px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(205, 217, 229, 0.75);
   letter-spacing: 0.04em;
 }
 
 .confidence {
-  font-size: 8px;
-  color: rgba(0, 212, 255, 0.6);
+  font-size: 7.5px;
+  color: rgba(0, 212, 255, 0.5);
   font-variant-numeric: tabular-nums;
   flex-shrink: 0;
 }
@@ -256,18 +246,18 @@
 .cardBot {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .zone {
   font-size: 7px;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.2);
   letter-spacing: 0.08em;
 }
 
 .timestamp {
   font-size: 7px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.22);
   font-variant-numeric: tabular-nums;
   margin-left: auto;
 }
@@ -276,20 +266,20 @@
   font-size: 6px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: rgba(0, 212, 255, 0.4);
-  background: rgba(0, 212, 255, 0.08);
+  color: rgba(0, 212, 255, 0.3);
+  background: rgba(0, 212, 255, 0.06);
   padding: 1px 4px;
   border-radius: 2px;
 }
 
 .ackBtn {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.4);
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -299,23 +289,23 @@
 }
 
 .ackBtn:hover {
-  background: rgba(0, 212, 255, 0.15);
-  border-color: rgba(0, 212, 255, 0.4);
+  background: rgba(0, 212, 255, 0.1);
+  border-color: rgba(0, 212, 255, 0.3);
   color: #00d4ff;
 }
 
-/* --- Empty state --- */
+/* ── Empty state ── */
 .empty {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   padding: 40px 0;
-  color: rgba(255, 255, 255, 0.2);
-  font-size: 10px;
-  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 9px;
+  letter-spacing: 0.1em;
 }
 
 .emptyIcon {
-  opacity: 0.3;
+  opacity: 0.25;
 }

@@ -1,8 +1,8 @@
 .sidebar {
-  width: 210px;
+  width: 196px;
   flex-shrink: 0;
   background: #060b18;
-  border-right: 1px solid rgba(0, 212, 255, 0.1);
+  border-right: 1px solid rgba(0, 212, 255, 0.08);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -12,20 +12,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 14px 10px;
-  border-bottom: 1px solid rgba(0, 212, 255, 0.08);
+  padding: 10px 12px 9px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.07);
 }
 
 .headerLabel {
-  font-size: 9px;
-  letter-spacing: 0.14em;
-  color: rgba(0, 212, 255, 0.6);
-  font-weight: 700;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  color: rgba(0, 212, 255, 0.45);
+  font-weight: 600;
 }
 
 .headerCount {
-  font-size: 9px;
-  color: #00ff88;
+  font-size: 8px;
+  color: rgba(0, 230, 118, 0.7);
   font-weight: 600;
   letter-spacing: 0.06em;
 }
@@ -33,16 +33,17 @@
 .cameraList {
   display: flex;
   flex-direction: column;
-  gap: 1px;
-  padding: 8px 8px 0;
+  gap: 2px;
+  padding: 6px 6px 0;
   flex: 1;
 }
 
 .cameraItem {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 6px;
-  padding: 10px 10px 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 2px solid rgba(0, 212, 255, 0.15);
+  border-radius: 3px;
+  padding: 9px 9px 7px;
   cursor: pointer;
   text-align: left;
   transition: all 0.2s ease;
@@ -50,36 +51,40 @@
 }
 
 .cameraItem:hover {
-  background: rgba(0, 212, 255, 0.06);
-  border-color: rgba(0, 212, 255, 0.2);
+  background: rgba(0, 212, 255, 0.04);
+  border-color: rgba(0, 212, 255, 0.15);
+  border-left-color: rgba(0, 212, 255, 0.4);
 }
 
 .cameraItem.selected {
-  background: rgba(0, 212, 255, 0.1);
-  border-color: rgba(0, 212, 255, 0.4);
+  background: rgba(0, 212, 255, 0.06);
+  border-color: rgba(0, 212, 255, 0.2);
+  border-left-color: #00d4ff;
 }
 
 .cameraItem.critical {
-  border-left: 3px solid #ff3b3b;
+  border-left-color: #ff3b3b;
+  background: rgba(255, 59, 59, 0.04);
 }
 
 .cameraItem.warning {
-  border-left: 3px solid #ffb800;
+  border-left-color: #ffb300;
+  background: rgba(255, 179, 0, 0.03);
 }
 
 .cameraItem.clear {
-  border-left: 3px solid rgba(0, 255, 136, 0.4);
+  border-left-color: rgba(0, 230, 118, 0.3);
 }
 
 .cameraTop {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 7px;
+  gap: 7px;
+  margin-bottom: 6px;
 }
 
 .cameraIcon {
-  color: rgba(0, 212, 255, 0.6);
+  color: rgba(0, 212, 255, 0.4);
   flex-shrink: 0;
 }
 
@@ -92,15 +97,15 @@
 }
 
 .cameraName {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  color: #e0f0ff;
-  letter-spacing: 0.06em;
+  color: #cdd9e5;
+  letter-spacing: 0.08em;
 }
 
 .cameraLocation {
-  font-size: 9px;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.35);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -116,29 +121,29 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  font-size: 9px;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  font-size: 8px;
   font-weight: 700;
 }
 
 .badgeRed {
-  background: rgba(255, 59, 59, 0.25);
+  background: rgba(255, 59, 59, 0.2);
   color: #ff3b3b;
-  border: 1px solid rgba(255, 59, 59, 0.4);
+  border: 1px solid rgba(255, 59, 59, 0.35);
 }
 
 .badgeYellow {
-  background: rgba(255, 184, 0, 0.2);
-  color: #ffb800;
-  border: 1px solid rgba(255, 184, 0, 0.35);
+  background: rgba(255, 179, 0, 0.15);
+  color: #ffb300;
+  border: 1px solid rgba(255, 179, 0, 0.3);
 }
 
 .cameraBottom {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .statusRow {
@@ -148,26 +153,26 @@
 }
 
 .dotOnline {
-  color: #00ff88;
+  color: #00e676;
 }
 
 .dotOffline {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.15);
 }
 
 .statusText {
-  font-size: 8px;
+  font-size: 7.5px;
   font-weight: 700;
-  color: #00ff88;
+  color: rgba(0, 230, 118, 0.8);
   letter-spacing: 0.1em;
 }
 
 .zoneTag {
-  font-size: 8px;
-  color: rgba(0, 212, 255, 0.5);
+  font-size: 7px;
+  color: rgba(0, 212, 255, 0.4);
   letter-spacing: 0.08em;
-  background: rgba(0, 212, 255, 0.08);
-  padding: 1px 5px;
+  background: rgba(0, 212, 255, 0.06);
+  padding: 1px 4px;
   border-radius: 2px;
 }
 
@@ -179,24 +184,25 @@
 }
 
 .alertState_critical { color: #ff3b3b; }
-.alertState_warning { color: #ffb800; }
-.alertState_clear { color: rgba(0, 255, 136, 0.6); }
+.alertState_warning { color: #ffb300; }
+.alertState_clear { color: rgba(0, 230, 118, 0.45); }
 
+/* ── Summary ── */
 .summary {
-  padding: 12px 14px;
-  border-top: 1px solid rgba(0, 212, 255, 0.08);
-  margin-top: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid rgba(0, 212, 255, 0.07);
+  margin-top: 6px;
 }
 
 .summaryRow {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .summaryLabel {
-  font-size: 8px;
+  font-size: 7.5px;
   letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.3);
-  font-weight: 700;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
 }
 
 .summaryStats {
@@ -210,24 +216,24 @@
   flex-direction: column;
   align-items: center;
   gap: 2px;
-  padding: 6px 4px;
+  padding: 7px 4px;
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.stat:first-child { border-radius: 4px 0 0 4px; }
-.stat:last-child { border-radius: 0 4px 4px 0; }
+.stat:first-child { border-radius: 3px 0 0 3px; }
+.stat:last-child { border-radius: 0 3px 3px 0; }
 .stat + .stat { border-left: none; }
 
 .statNum {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   line-height: 1;
 }
 
 .statLabel {
-  font-size: 7px;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.3);
+  font-size: 6.5px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.2);
 }

@@ -1,53 +1,142 @@
-.topbar {
+.topbarWrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 52px;
-  background: #060b18;
-  border-bottom: 1px solid rgba(0, 212, 255, 0.15);
-  padding: 0 16px;
-  gap: 16px;
+  flex-direction: column;
   flex-shrink: 0;
   position: relative;
   z-index: 10;
 }
 
+/* ── Threat level strip ── */
+.threatStrip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 22px;
+  padding: 0 16px;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  border-bottom: 1px solid transparent;
+  transition: background 0.6s ease, border-color 0.6s ease;
+}
+
+.threat_nominal {
+  background: rgba(0, 230, 118, 0.06);
+  border-bottom-color: rgba(0, 230, 118, 0.15);
+  color: rgba(0, 230, 118, 0.65);
+}
+
+.threat_elevated {
+  background: rgba(255, 179, 0, 0.08);
+  border-bottom-color: rgba(255, 179, 0, 0.2);
+  color: rgba(255, 179, 0, 0.75);
+}
+
+.threat_critical {
+  background: rgba(255, 23, 68, 0.1);
+  border-bottom-color: rgba(255, 23, 68, 0.3);
+  color: rgba(255, 100, 100, 0.9);
+  animation: critStrip 2s ease-in-out infinite;
+}
+
+@keyframes critStrip {
+  0%, 100% { background: rgba(255, 23, 68, 0.1); }
+  50% { background: rgba(255, 23, 68, 0.17); }
+}
+
+.threatFacility {
+  opacity: 0.6;
+  letter-spacing: 0.16em;
+}
+
+.threatSep {
+  opacity: 0.25;
+}
+
+.threatLabel {
+  letter-spacing: 0.1em;
+}
+
+.threatValue {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.threatSession {
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+}
+
+.threatCritBadge {
+  margin-left: auto;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  animation: blinkFast 0.6s ease-in-out infinite;
+}
+
+@keyframes blinkFast {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+/* ── Main topbar ── */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  background: #060b18;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  padding: 0 16px;
+  gap: 16px;
+}
+
 .brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   flex-shrink: 0;
 }
 
 .brandIcon {
   color: #00d4ff;
+  opacity: 0.9;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
 
 .brandName {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   color: #00d4ff;
+  line-height: 1;
 }
 
 .brandSub {
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  color: rgba(0, 212, 255, 0.5);
-  margin-top: 1px;
+  font-size: 7px;
+  letter-spacing: 0.28em;
+  color: rgba(0, 212, 255, 0.4);
+  line-height: 1;
 }
 
 .version {
-  font-size: 9px;
-  color: rgba(255, 255, 255, 0.25);
-  letter-spacing: 0.05em;
-  margin-left: 4px;
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.18);
+  letter-spacing: 0.04em;
+  align-self: flex-end;
+  margin-bottom: 1px;
 }
 
+/* ── Status row (center) ── */
 .statusRow {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   flex: 1;
   justify-content: center;
 }
@@ -56,68 +145,87 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: 0.08em;
 }
 
 .onlineIcon {
-  color: #00ff88;
+  color: #00e676;
 }
 
 .statusLabel {
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.28);
 }
 
 .statusVal {
-  color: #00ff88;
+  color: #00e676;
   font-weight: 600;
 }
 
 .divider {
   width: 1px;
-  height: 20px;
-  background: rgba(0, 212, 255, 0.12);
+  height: 18px;
+  background: rgba(0, 212, 255, 0.1);
 }
 
+/* ── Alert counters ── */
 .counters {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
 }
 
 .counter {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  padding: 3px 8px;
+  letter-spacing: 0.06em;
+  padding: 3px 7px;
   border-radius: 3px;
   position: relative;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.counterLabel {
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
 }
 
 .counter.critical {
+  color: rgba(255, 59, 59, 0.5);
+  border-color: rgba(255, 59, 59, 0.1);
+}
+
+.counter.critical.counterActive {
   color: #ff3b3b;
-  background: rgba(255, 59, 59, 0.12);
-  border: 1px solid rgba(255, 59, 59, 0.25);
+  background: rgba(255, 59, 59, 0.1);
+  border-color: rgba(255, 59, 59, 0.3);
 }
 
 .counter.warning {
-  color: #ffb800;
-  background: rgba(255, 184, 0, 0.1);
-  border: 1px solid rgba(255, 184, 0, 0.2);
+  color: rgba(255, 179, 0, 0.5);
+  border-color: rgba(255, 179, 0, 0.08);
 }
 
-.counter.clear {
-  color: #00ff88;
-  background: rgba(0, 255, 136, 0.08);
-  border: 1px solid rgba(0, 255, 136, 0.15);
+.counter.warning.counterActive {
+  color: #ffb300;
+  background: rgba(255, 179, 0, 0.08);
+  border-color: rgba(255, 179, 0, 0.2);
+}
+
+.counter.ok {
+  color: rgba(0, 230, 118, 0.5);
+  border-color: rgba(0, 230, 118, 0.08);
 }
 
 .blinkDot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: #ff3b3b;
   animation: blink 0.8s ease-in-out infinite;
@@ -126,9 +234,10 @@
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.15; }
+  50% { opacity: 0.1; }
 }
 
+/* ── Clock ── */
 .clock {
   display: flex;
   flex-direction: column;
@@ -137,19 +246,20 @@
 }
 
 .date {
-  font-size: 9px;
-  color: rgba(255, 255, 255, 0.35);
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.25);
   letter-spacing: 0.06em;
 }
 
 .time {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
   color: #00d4ff;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   font-variant-numeric: tabular-nums;
 }
 
+/* ── Controls ── */
 .controls {
   display: flex;
   align-items: center;
@@ -161,11 +271,11 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 9px;
+  padding: 4px 9px;
+  border-radius: 3px;
+  font-size: 8px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   cursor: pointer;
   border: 1px solid;
   transition: all 0.2s ease;
@@ -173,44 +283,45 @@
 }
 
 .soundOn {
-  background: rgba(0, 212, 255, 0.1);
-  border-color: rgba(0, 212, 255, 0.35);
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.25);
   color: #00d4ff;
 }
 
 .soundOn:hover {
-  background: rgba(0, 212, 255, 0.18);
+  background: rgba(0, 212, 255, 0.15);
 }
 
 .soundOff {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.35);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .soundOff:hover {
-  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .systemStatus {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 9px;
+  font-size: 8px;
   letter-spacing: 0.1em;
-  color: #00ff88;
+  color: rgba(0, 230, 118, 0.6);
 }
 
 .systemDot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background: #00ff88;
-  box-shadow: 0 0 6px #00ff88;
-  animation: pulse 2s ease-in-out infinite;
+  background: #00e676;
+  box-shadow: 0 0 5px rgba(0, 230, 118, 0.6);
+  animation: pulse 3s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 6px #00ff88; }
-  50% { opacity: 0.6; box-shadow: 0 0 2px #00ff88; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
